@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/style.css">
+    <title>The Jexes</title>
+</head>
+
+<body>
+    <header>
+        <h1>Makayla and AJ Jex</h1>
+        <nav>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/registry">Registry</a></li>
+                <li><a href="/engagement">Engagement Photos</a></li>
+                <li><a href="/guest-photos">Guest Photos</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="gallery-page">
+        <h2>Guest Photos &amp; Videos</h2>
+        <p>Share your favorite moments from the wedding with us.</p>
+
+        <form id="upload-form" class="upload-panel">
+            <label for="guest-name">Your name <span>(optional)</span></label>
+            <input id="guest-name" name="guestName" type="text" maxlength="60" autocomplete="name"
+                placeholder="e.g. Jamie">
+
+            <label for="guest-caption">A note about your photos <span>(optional)</span></label>
+            <input id="guest-caption" name="caption" type="text" maxlength="240"
+                placeholder="Add a short caption">
+
+            <input id="guest-files" name="files" type="file"
+                accept="image/jpeg,image/png,image/webp,image/gif,video/mp4,video/quicktime,video/webm" multiple hidden>
+            <button id="choose-files" type="button">Choose Photos or Videos</button>
+            <p class="upload-help">JPEG, PNG, WebP, GIF, MP4, MOV, or WebM. Maximum 100 MB per file.</p>
+            <p id="upload-status" class="upload-status" role="status" aria-live="polite"></p>
+        </form>
+
+        <div class="gallery-toolbar" aria-label="Filter guest uploads">
+            <button class="filter-button is-active" type="button" data-filter="all" aria-pressed="true">All</button>
+            <button class="filter-button" type="button" data-filter="image" aria-pressed="false">Photos</button>
+            <button class="filter-button" type="button" data-filter="video" aria-pressed="false">Videos</button>
+        </div>
+
+        <p id="gallery-status" class="gallery-status" role="status" aria-live="polite">Loading guest uploads...</p>
+        <ul id="guest-gallery" class="gallery" aria-label="Photos and videos shared by guests"></ul>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 Makayla and AJ Jex. All rights reserved.</p>
+    </footer>
+    <script src="/guest_photos.js" defer></script>
+</body>
+
+</html>

@@ -1,0 +1,12 @@
+{
+  "name": "the-jexes-wedding-site",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Wedding website and guest media gallery",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}
